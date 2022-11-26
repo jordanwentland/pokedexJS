@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "final-project",
+  "version": "1.0.2",
+  "description": "Final project for scripting class! This project is a pokedex on demand, covering the first 905 pokemon",
+  "main": "server.js",
+  "devDependencies": {},
+  "author": "Jordan Wentland",
+  "license": "ISC"
+}
