@@ -3,7 +3,7 @@ img {
     max-width:20%;
     height:auto;
     }
-p,h2 {
+p,h2, div {
     font-family: 'Twilio Sans Mono', sans-serif;  
 }
 body {

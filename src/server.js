@@ -10,3 +10,4 @@ app.get('/', function(req, res) {
 
 app.listen(8080);
 console.log('Pokedex is now Running @ http://localhost:8080/');
+console.log('Press CTR + C to exit the webserver..')
