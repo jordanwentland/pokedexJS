@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
+   <title>Pokedex</title>
    <script src="poke.js"></script>
    <link rel="stylesheet" href="style.css">
    <body>
-      <div class="center">
+      <div class="mainDiv">
          <p id="code"></p>
          <input type="text" id="pokeName" value="Enter pokemon here...">
          <input id="clickMe" type="button" value="go!" onclick="pokeInfo()" />
@@ -14,7 +15,11 @@
          <img id="normal"></img>
          <br>
          <p id="bio"></p>
+         <div class="stats">
+            <table id = "statsTable"></table>
+         </div>
       </div>
-      <p class = "center"><i>Please enter a pokemon above - if you would like a random pokemon, type random!</i></p>
+      <br>
+      <p class = "footer"><i>Please enter a pokemon above - if you would like a random pokemon, type random!</i></p>
    </body>
 </html>

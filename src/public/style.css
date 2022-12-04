@@ -6,19 +6,29 @@ img {
 p,h2 {
     font-family: 'Twilio Sans Mono', sans-serif;  
 }
-div {
-    height: 500px;
-    width: 50%;
-    background-color: #2c698d;
-    text-align: center;
-}
 body {
     background-color: #272643;
     color: #bae8e8;
 }
-.center {
+.mainDiv {
+    height: auto;
+    width: 50%;
+    background-color: #2c698d;
+    text-align: center;
+    border-radius: 25px;
+    padding: 20px;
+    border: 2px solid #bae8e8;
+    margin: auto;
+}
+.footer {
     margin: auto;
     width: 50%;
-    border: 3px solid #bae8e8;
+    border: 2px solid #bae8e8;
     padding: 10px;
+    font-size: small;
+    border-radius: 25px;
+    text-align: center;
+}
+.stats {
+    margin:auto;
 }

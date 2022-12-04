@@ -9,4 +9,4 @@ app.get('/', function(req, res) {
 });
 
 app.listen(8080);
-console.log('Pokedex is now Running!');
+console.log('Pokedex is now Running @ http://localhost:8080/');

@@ -6,10 +6,9 @@
     "start": "node server.js"
   },
   "name": "final-project",
-  "version": "1.0.2",
+  "version": "1.1.4",
   "description": "Final project for scripting class! This project is a pokedex on demand, covering the first 905 pokemon",
   "main": "server.js",
-  "devDependencies": {},
   "author": "Jordan Wentland",
   "license": "ISC"
 }

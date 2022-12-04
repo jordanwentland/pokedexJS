@@ -4,11 +4,10 @@ async function pokeInfo() {
     if (pokemon === "random") {
       pokemon = getRandomInt(905);
     }
-    let apiCall = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}/`);
+    let apiCall = await fetch(`http://localhost:8080/api/pokemon/${pokemon}/data.json`);
     var data = await apiCall.json();
     let sprite = data["sprites"]["other"]["home"];
-    let call2 = data["species"]["url"];
-    let apiCall2 = await fetch(`${call2}`);
+    let apiCall2 = await fetch(`http://localhost:8080/api/pokemon/${pokemon}/entry/data.json`);
     var data2 = await apiCall2.json();
     let preBio = data2["flavor_text_entries"];
     var bio = [];
@@ -27,6 +26,7 @@ async function pokeInfo() {
     document
       .getElementById("normal")
       .setAttribute("src", sprite["front_default"]);
+    pokeStats(data);
   } catch (error) {
     document.getElementById("code").innerHTML = "Pokemon Not Found!";
     document.getElementById("bio").innerHTML = "";
@@ -34,7 +34,27 @@ async function pokeInfo() {
     document.getElementById("shiny").setAttribute("src", "");
     document.getElementById("normal").setAttribute("src", "");
     console.log("error caught");
+    console.log(error);
   }
+}
+
+function pokeStats(data) {
+  document.getElementById("statsTable").innerHTML="";
+  let statsData = data["stats"];
+  var headers = ["Stat", "Value"];
+  var table = document.createElement("TABLE");
+  statLength = statsData.length
+  for (var i = 0; i < statLength; i++) {
+    var row = table.insertRow(i);
+    row.insertCell(0).innerHTML = statsData[i]['stat']['name'];
+    row.insertCell(1).innerHTML = statsData[i]["base_stat"];
+  }
+  var header = table.createTHead();
+  var headerRow = header.insertRow(0);
+  for (var i = 0; i < headers.length; i++) {
+    headerRow.insertCell(i).innerHTML = headers[i];
+  }
+  document.getElementById("statsTable").append(table);
 }
 
 function getRandomInt(max) {
