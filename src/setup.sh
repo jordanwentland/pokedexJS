@@ -1,3 +1,6 @@
+#This script prompts the user for their choice on the script and then does what is asked to do automatically for the user.
+#This should streamline the setup process of the webserver + api and make management in the future easier :-)
+
 PS3='Please enter your choice (If this is your first time running the script, please select 1): '
 options=("Setup API and Start WebServer" "Refresh local API Data" "Start WebServer" "Quit")
 select opt in "${options[@]}"
